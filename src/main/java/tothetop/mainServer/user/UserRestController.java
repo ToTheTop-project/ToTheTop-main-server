@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class UserRestController {
-
+    private final int test = 0;
 }

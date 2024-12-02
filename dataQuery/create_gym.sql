@@ -7,15 +7,17 @@ use gyms;
 
 show tables;
 
+drop table gyms;
+
 create table gyms(
     id BIGINT primary key KEY AUTO_INCREMENT,
-    gymId BIGINT unique not null ,
-    gymName varchar(20),
-    thumUrl varchar(1000) null,
-    address varchar(300),
-    roadAddress varchar(300),
-    metro varchar(100),
-    isParking boolean not null ,
+    naverId BIGINT unique not null ,
+    name varchar(20) not null,
+    thumbUrl varchar(1000) null,
+    address varchar(300) not null,
+    roadAddress varchar(300) not null,
+    metroString varchar(100),
+    isPossibleParking boolean not null ,
     latitude decimal not null ,
     longitude decimal not null ,
     ktCallMd varchar(500)

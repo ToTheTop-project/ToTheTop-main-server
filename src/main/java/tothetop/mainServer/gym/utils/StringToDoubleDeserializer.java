@@ -1,22 +1,20 @@
-package tothetop.mainServer.utils;
+package tothetop.mainServer.gym.utils;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonDeserializer;
 import java.io.IOException;
 
-public class StringToLongDeserialize extends JsonDeserializer<Long> {
-
+public class StringToDoubleDeserializer extends JsonDeserializer<Double> {
     @Override
-    public Long deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
+    public Double deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
         throws IOException, JsonProcessingException {
         String value = jsonParser.getText();
         try {
-            return Long.parseLong(value);
+            return Double.parseDouble(value);
         } catch (NumberFormatException e) {
-            return 0L; // 기본값 설정 (예: 0.0)
+            return 0.0; // 기본값 설정 (예: 0.0)
         }
     }
 }

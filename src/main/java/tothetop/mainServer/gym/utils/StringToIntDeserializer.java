@@ -1,4 +1,4 @@
-package tothetop.mainServer.utils;
+package tothetop.mainServer.gym.utils;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -99,6 +99,7 @@ public class GymsDataAccessService {
                 String homepage = "";
                 String instagram = "";
                 String facebook = "";
+
                 if (gymNode.has("snsInfo")) {
                     JsonNode snsInfoNode = gymNode.get("snsInfo");
                     blog = snsInfoNode.has("blog") ? snsInfoNode.get("blog").asText() : "";
